@@ -8,7 +8,7 @@ import { useCameraStore } from "../store/cameraStore";
 import { readShareStateFromLocation } from "../lib/shareLink";
 import SelectableObject from "./SelectableObject";
 import Fixtures from "./Fixtures";
-const MODEL_URL = "/models/scene.glb";
+const MODEL_URL = `${import.meta.env.BASE_URL}models/scene.glb`;
 export default function SceneRoot() {
   const gltf = useGLTF(MODEL_URL);
   const objects = useSceneStore((s) => s.objects);
