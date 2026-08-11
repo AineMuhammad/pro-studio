@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/pro-studio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Studio</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("scene-viewer:theme");
+          var pref = stored === "light" || stored === "dark" || stored === "system" ? stored : "dark";
+          var isDark = pref === "dark" || (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", isDark);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/pro-studio/assets/index-C667c18F.js"></script>
+    <link rel="stylesheet" crossorigin href="/pro-studio/assets/index-Cd8SIHKY.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
